@@ -9,6 +9,19 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var myLabel: UILabel!
+    
+    var tapCount = 0
+    
+    @IBAction func myButton(_ sender: Any) {
+        tapCount = tapCount + 1
+            print(tapCount)
+        if tapCount > 10 {
+            myLabel.text = "Stop pressing the button"
+        }
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
